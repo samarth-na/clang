@@ -7,6 +7,5 @@ int main() {
             std::cout << "x";
         }
         std::cout << "\n";
-        // std::cout << num << "\n";
     }
 }
