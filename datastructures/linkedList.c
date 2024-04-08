@@ -2,26 +2,54 @@
 #include <stdlib.h>
 
 typedef struct Node {
-    int data; // You can change this to any data type you need
-    struct Node *next;
+    int Value;
+    struct Node *Next;
 } Node;
 
-void push(Node **head_ref, int new_data) {
-    Node *new_node = (Node *)malloc(sizeof(Node));
-    new_node->data = new_data;
-    new_node->next = (*head_ref);
-    (*head_ref) = new_node;
+typedef struct LinkedList {
+    Node *Head;
+    Node *Tail;
+    int Size;
+} LinkedList;
+
+// Function to create a new node
+Node *createNode(int value) {
+    Node *newNode = (Node *)malloc(sizeof(Node));
+    newNode->Value = value;
+    newNode->Next = NULL;
+    return newNode;
 }
 
-int main() { Node *head = NULL; }
-void printentirelist(Node *n) {
-    while (n != NULL) {
-        printf("%d ", n->data);
-        n = n->next;
+// Function to append a new node to the end of the list
+void append(LinkedList *list, int value) {
+    Node *newNode = createNode(value);
+
+    if (list->Head == NULL) {
+        list->Head = list->Tail = newNode;
+    } else {
+        list->Tail->Next = newNode;
+        list->Tail = newNode;
     }
+
+    list->Size++;
 }
-struct Node *insertAtBeginning(struct Node *head, int data) {
-    struct Node *newNode = createNode(data);
-    newNode->next = head;
-    return newNode;
+
+int main() {
+    LinkedList list = {NULL, NULL, 0};
+
+    append(&list, 1);
+    append(&list, 2);
+    append(&list, 3);
+
+    // Traverse the list and print the values
+    Node *current = list.Head;
+    while (current != NULL) {
+        printf("%d -> ", current->Value);
+        current = current->Next;
+    }
+    printf("NULL\n");
+
+    printf("Size of the list: %d\n", list.Size);
+
+    return 0;
 }
