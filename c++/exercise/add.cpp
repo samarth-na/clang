@@ -1,4 +1,5 @@
 #include <iostream>
+
 int a, b, c, d;
 int main() {
 
