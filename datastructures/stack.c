@@ -23,16 +23,19 @@ int pop() {
 }
 
 int main() {
-    printf()
-    // push(10);
-    // push(20);
-    // push(30);
-    //
-    // printf("Top element: %d\n", stack[top]); // Output: 30
-    //
-    // pop();
-    //
-    // if (top == -1) {
-    //     printf("Stack is empty\n");
-    // } else {
+    printf("");
+    push(10);
+    push(20);
+    push(30);
+
+    printf("Top element: %d\n", stack[top]); // Output: 30
+
+    pop();
+
+    if (top == -1) {
+        printf("Stack is empty\n");
+    } else {
+        return 0;
+    }
+    return 0;
 }

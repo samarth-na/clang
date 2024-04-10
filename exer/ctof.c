@@ -5,6 +5,7 @@ int ctf(int cel, int fer);
 
 int ftc(int cel, int fer);
 int main() {
+
     printf("what you want to convert to \n");
     printf("type 'c' for ferenite to celcius\n");
     printf("type 'f' for celcius to ferenite\n");
