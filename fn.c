@@ -11,20 +11,6 @@ int main() {
     int result = add(ai, bo);
 
     printf("Result: %d\n", result);
-
-    int x, y;
-    {
-        x = 9;
-        y = 10;
-    }
-
-    while (x > 0) {
-        printf("%i\n", x);
-        x--;
-    }
 }
 
-int add(int a, int b) {
-    ;
-    return a + b;
-}
+int add(int a, int b) { return a + b; }

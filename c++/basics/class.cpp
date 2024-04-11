@@ -32,9 +32,7 @@ int main() {
     person dane;
     addnew("namami");
 
-    {
-        dane.age = 19;
-        cout << "enter name" << endl;
-        cin >> dane.name;
-    }
+    dane.age = 19;
+    cout << "enter name" << endl;
+    cin >> dane.name;
 }
