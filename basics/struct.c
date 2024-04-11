@@ -18,13 +18,13 @@ int main() {
 
     struct structure {
         int number;
-        int *next;
+        struct structure *next;
     } struct1;
 
     struct structure struct2;
 
     struct1.number = 10;
-    struct1.next = &struct2.number;
+    struct1.next = &struct2;
 
     {
         printf("%d\n", struct1.number);
