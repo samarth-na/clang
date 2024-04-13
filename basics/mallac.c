@@ -6,7 +6,7 @@ int main() {
     // Allocate memory for an integer
     int *ptr = (int *)malloc(sizeof(int));
     int *pt;
-    printf("%p\n", ptr);
+    printf("%d\n", *ptr);
 
     // Check if the memory allocation was successful
 
