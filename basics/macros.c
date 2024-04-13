@@ -5,6 +5,7 @@
 
 // Function-like macro created by the metomacro
 #define SQUARE(...) CREATE_FUNCLIKE_MACRO(SQUARE_IMPL, __VA_ARGS__)
+#define LEST 10
 
 // Implementation of the SQUARE macro
 #define SQUARE_IMPL(x) ((x) * (x))

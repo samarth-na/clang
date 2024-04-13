@@ -18,11 +18,16 @@ node start, end;
 void addelement(int value) {
     if (list.START.Value == 0) {
         list.START.Value = value;
+        list.START.Next = &list.END;
     } else {
-        node newnode = {value, list.START.Next};
-        list.START.Next = &newnode;
-    };
-};
+        node *newnode = (void *)malloc(sizeof(node));
+        newnode->Value = value;
+        newnode->Next = list.START.Next;
+        list.START.Next = newnode;
+    }
+    list.length++;
+}
+
 void printlist() {
     node *current = list.START.Next;
     printf("Linked List: ");
@@ -32,25 +37,22 @@ void printlist() {
     }
     printf("\n");
 }
+
 int main() {
     list.length = 0;
-    list.START = start;
-    list.END = end;
-    start.Next = &end;
-    ;
+    list.START.Next = &list.END;
+    list.END.Next = NULL;
 
     char choice;
     while (choice != 'q') {
         system("clear");
-        printf("");
         printf("\n ================================================");
-        printf("\n  Linked List Program");
-        printf("\n  do you want to continue"
-               "\n  for adding an element to list  [a]"
-               "\n  for printing the list [n]"
-               "\n  to exit type  [q]");
-
-        printf("\n  enter what you wnat to do: ");
+        printf("\n Linked List Program");
+        printf("\n do you want to continue"
+               "\n for adding an element to list [a]"
+               "\n for printing the list [p]"
+               "\n to exit type [q]");
+        printf("\n enter what you want to do: ");
         scanf(" %c", &choice);
 
         switch (choice) {
@@ -59,9 +61,6 @@ int main() {
             int value;
             scanf("%d", &value);
             addelement(value);
-            break;
-
-        case 'd':
             break;
         case 'p':
             printlist();

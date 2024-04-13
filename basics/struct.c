@@ -3,16 +3,16 @@
 struct node {
     int Value;
     struct Node *Next;
-} node1;
+} node;
 
 int main() {
 
-    node1.Value = 5;
+    node.Value = 5;
 
     struct node two;
 
     {
-        printf("%p\n", &node1.Next);
+        printf("%p\n", &node.Next);
         printf("%p\n", &two);
     }
 

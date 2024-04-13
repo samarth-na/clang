@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 #define MAX_SIZE 100
-#define SQUARE(x) ((x) * (x))
 
 int stack[MAX_SIZE];
 int top = -1;
