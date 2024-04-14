@@ -1,35 +1,27 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-struct node {
-    int Value;
-    struct Node *Next;
-} node;
+typedef struct str {
+    int value;
+    struct str *next;
+} str;
+
+typedef struct linkedlist {
+    str START;
+    str END;
+    int length;
+} linkedlist;
+linkedlist list;
 
 int main() {
 
-    node.Value = 5;
+    linkedlist list = {{0, NULL}, {0, NULL}, 0};
 
-    struct node two;
+    list.START.next = &list.END;
 
-    {
-        printf("%p\n", &node.Next);
-        printf("%p\n", &two);
-    }
-
-    struct structure {
-        int number;
-        struct structure *next;
-    } struct1;
-
-    struct structure struct2;
-
-    struct1.number = 10;
-    struct1.next = &struct2;
-
-    {
-        printf("%d\n", struct1.number);
-        printf("%p\n", &struct2.next);
-    }
+    printf("   {%p}    \n", &list.START.next);
+    printf("  {%d}   {%p}    {%p}\n", list.START.value, &list.START,
+           list.START.next);
+    printf("  {%d}   {%p}    {%p}\n", list.START.value, &list.START,
+           list.START.next);
 }
-
-;

@@ -5,7 +5,7 @@ int main() {
     rear = 10;
 
     if (rear >= MAXSIZE - 1) {
-        printf("Queue is full");
+        printf("\r Queue is full");
         return 0;
     }
     if (front == -1) {

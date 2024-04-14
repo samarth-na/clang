@@ -3,19 +3,16 @@
 
 int main() {
 
-    // Allocate memory for an integer
     int *ptr = (int *)malloc(sizeof(int));
-    int *pt;
-    printf("%d\n", *ptr);
 
-    // Check if the memory allocation was successful
+    long size = sizeof(int);
 
-    // Use the allocated memory
-    *ptr = 42;
-    printf("Value stored in the allocated memory: %d\n", *ptr);
+    printf("%ld\n", size);
+    printf("%d , %p\n", *ptr, ptr);
 
     // Free the allocated memory
-    free(ptr);
+    //
+    //
 
     return 0;
 }
