@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define the maximum size of the queue
+//  Define the maximum size of the queue
 #define MAXSIZE 100
-
 // Define the queue as an array of integers with the maximum size
 typedef int queue[MAXSIZE];
 
 // Declare the queue
 queue list;
-
 // Initialize the front and rear pointers of the queue
 int front = -1, rear = -1;
 
@@ -49,16 +47,17 @@ void dequeue() {
         // Set the dequeued element to 0 and decrement the rear pointer
         list[rear] = 0;
         rear--;
-        printf("Deleted a  \n");
+        printf("Deleted an item  \n");
     }
 }
 
 // Function to print the contents of the queue
 void print() {
-    // Iterate through the queue and print the elements
     if (rear == -1) {
         printf("Queue is empty\n");
     }
+
+    // Iterate through the queue and print the elements
     for (int index = 0; index <= rear; index++) {
         printf("\n at index (%d) the value {%d}", index, list[index]);
 
@@ -73,14 +72,11 @@ void print() {
     printf("\n");
 }
 
-// Function to display the menu and handle user input
-void menu() {
+void menu() { // Function to display the menu and handle user input
     char choice;
 
-    // Clear the screen
-    system("clear");
+    system("clear"); // Clear the screen
 
-    // Display the menu
     printf("▎queue Program\n");
     printf("▎Things you can do with linked queue:\n");
     printf("▎a - add a value to the queue\n");
@@ -94,8 +90,8 @@ void menu() {
                ") : ");
         scanf(" %c", &choice);
 
-        // Handle the user's choice
-        switch (choice) {
+        switch (choice) { // Handle the user's choice
+
         case 'a':
             printf("\n");
             enqueue();

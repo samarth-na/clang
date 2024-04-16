@@ -1,9 +1,11 @@
 In C/C++, there are several built-in data structures provided by the standard library. These data structures are implemented using different algorithms and are optimized for different use cases. Here's an overview of the commonly used data structures in C/C++:
 
---------------------------------------------------------------------------------------
+---
+
 1. **Arrays**: Arrays are a collection of elements of the same data type stored in contiguous memory locations. Arrays have a fixed size, and elements are accessed using an index. Arrays are suitable for storing and accessing data sequentially.
-->
-```c 
+   ->
+
+````c
 #include <stdio.h>
 
 int main() {
@@ -66,8 +68,10 @@ int main() {
 
     return 0;
 }
-```
---------------------------------------------------------------------------------------
+````
+
+---
+
 3. **Stacks**: A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle. Elements are added and removed from the same end, called the top. Stacks are commonly used for backtracking algorithms, expression evaluation, and function call management.
 
 4. **Queues**: A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle. Elements are added at the rear end and removed from the front end. Queues are commonly used for handling tasks in the order they arrive, such as job scheduling or event handling.
