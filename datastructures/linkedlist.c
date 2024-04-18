@@ -105,15 +105,11 @@ void interface(node **root) {
 
 int main() {
     node *root = (node *)malloc(sizeof(node));
-    int *asd = (int *)malloc(sizeof(int));
-    root->value = 9;
-    root->next = NULL;
 
     if (root == NULL) {
         exit(1);
     }
     // node *root = NULL;
-    insertAtBeginnin(&root, 9);
     insertAtBeginnin(&root, 9);
     insertAtBeginnin(&root, 9);
     insertAtBeginnin(&root, 9);
