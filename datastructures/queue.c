@@ -14,7 +14,6 @@ int front = -1, rear = -1;
 // Function to enqueue an element into the queue
 void enqueue() {
     int value;
-
     // Prompt the user to enter the value to be added
     printf("type the number you want to add in the queue = ");
     scanf("%d", &value);

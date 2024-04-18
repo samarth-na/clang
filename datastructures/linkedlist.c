@@ -12,7 +12,6 @@ typedef struct node {
 //------------------------------------------------------------------------
 
 void insertAtBeginnin(node **root, int value) {
-
     node *newnode = (node *)malloc(sizeof(node));
     newnode->value = value;
     newnode->next = *root;
@@ -58,19 +57,6 @@ void dealocate(node **root) {
 
 //------------------------------------------------------------------------
 
-void program() {
-    printf("\n▎linked list progam"
-           "\n▎actions you can do "
-           "\n▎add an element [a]"
-           "\n▎remove an element [d]"
-           "\n▎print the list [p]"
-           "\n▎QUIT the programc [q]"
-           "\n▎");
-    ;
-}
-
-//------------------------------------------------------------------------
-
 void printlist(node *root) {
     printf("\n");
 
@@ -82,20 +68,69 @@ void printlist(node *root) {
 
 //------------------------------------------------------------------------
 
+void interface(node **root) {
+    printf("\n▎linked list progam"
+           "\n▎actions you can do "
+           "\n▎add an element [a]"
+           "\n▎remove an element [d]"
+           "\n▎print the list [p]"
+           "\n▎QUIT the programc [q]"
+           "\n▎");
+    char choice;
+    while (1) {
+        printf(
+            "\n▎Enter your choice (a-add, d-delete, p-print, q-QUIT ,c-clear "
+            ") : ");
+        scanf(" %c", &choice);
+
+        switch (choice) { // Handle the user's choice
+
+            int value;
+        case 'i':
+            printf("Enter the number you want to insert : ");
+            scanf("%d", &value);
+            insertAtBeginnin(root, value);
+            break;
+        case 'e':
+            printf("Enter the number you want to insert : ");
+            scanf("%d", &value);
+            insertAtEnd(root, value);
+            break;
+        case 'd':
+            break;
+        case 'p':
+            printlist(*root);
+            break;
+        case 'q':
+            printf("EXITED \n");
+            return;
+        case 'c':
+            system("clear");
+            break;
+        default:
+            printf("Invalid choice. Please try again.\n");
+            break;
+        }
+    }
+}
+
+//------------------------------------------------------------------------
+
 int main() {
     node *root = (node *)malloc(sizeof(node));
     int *asd = (int *)malloc(sizeof(int));
+    root->value = 9;
+    root->next = NULL;
 
     if (root == NULL) {
         exit(1);
     }
     // node *root = NULL;
-
-    insertAtEnd(&root, 1);
-    insertAtEnd(&root, 2);
-    insertAtEnd(&root, 3);
-    printlist(root);
-    insertAtBeginnin(&root, 4);
+    insertAtBeginnin(&root, 9);
+    insertAtBeginnin(&root, 9);
+    insertAtBeginnin(&root, 9);
+    insertAtBeginnin(&root, 9);
+    insertAtBeginnin(&root, 9);
     printlist(root);
 }
 
