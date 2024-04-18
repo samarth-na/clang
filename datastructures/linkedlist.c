@@ -2,14 +2,10 @@
 #include <stdlib.h>
 #include <sys/types.h>
 
-//------------------------------------------------------------------------
-
 typedef struct node {
     int value;
     struct node *next;
 } node;
-
-//------------------------------------------------------------------------
 
 void insertAtBeginnin(node **root, int value) {
     node *newnode = (node *)malloc(sizeof(node));
@@ -17,7 +13,6 @@ void insertAtBeginnin(node **root, int value) {
     newnode->next = *root;
     *root = newnode;
 }
-//------------------------------------------------------------------------
 
 void insertAtEnd(node **root, int value) {
 
@@ -42,8 +37,6 @@ void insertAtEnd(node **root, int value) {
     current->next = newnode;
 }
 
-//------------------------------------------------------------------------
-
 void dealocate(node **root) {
     node *current = *root;
     while (current->next != NULL) {
@@ -55,8 +48,6 @@ void dealocate(node **root) {
     *root = NULL;
 }
 
-//------------------------------------------------------------------------
-
 void printlist(node *root) {
     printf("\n");
 
@@ -65,8 +56,6 @@ void printlist(node *root) {
     }
     printf("NULL\n");
 }
-
-//------------------------------------------------------------------------
 
 void interface(node **root) {
     printf("\n▎linked list progam"
@@ -114,8 +103,6 @@ void interface(node **root) {
     }
 }
 
-//------------------------------------------------------------------------
-
 int main() {
     node *root = (node *)malloc(sizeof(node));
     int *asd = (int *)malloc(sizeof(int));
@@ -133,5 +120,3 @@ int main() {
     insertAtBeginnin(&root, 9);
     printlist(root);
 }
-
-//------------------------------------------------------------------------
