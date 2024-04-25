@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-ind main() {
+int main() {
     int a[] = {1, 2, 3, 4};
     int non;
     printf("%d  ,e of non \n", non);
