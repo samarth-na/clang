@@ -1,6 +1,8 @@
 #include <stdio.h>
 #define MAXSIZE 10
+
 int main() {
+
     int rear, front;
     rear = 10;
 
