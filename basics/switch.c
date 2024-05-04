@@ -2,7 +2,6 @@
 
 int main() {
     char choice;
-
     printf("Linked List Program\n");
     printf("Things you can do with linked lists:\n");
     printf("a - add a value to the list\n");
