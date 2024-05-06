@@ -1,20 +1,20 @@
 #include <stdio.h>
 int main() {
-    int i = 0;
+    int inc = 0;
 
-    // loop needs three things start, end and increment valus and then you add
-    // the action you want to do where you place these three things is what
-    // define the types of loop
+    // loop needs three things start, end and increment valus
+    // then you add the action,where you place these for things
+    // is what define the types of loop
 
     // while
-    while (i < 10) {
+    while (inc < 10) {
         printf("while\n");
-        i++;
+        inc++;
     }
     printf("\n");
 
     // for
-    for (i = 0; i < 10; i++) {
+    for (inc = 0; inc < 10; inc++) {
         printf("forr\n");
     }
     printf("\n");
@@ -22,16 +22,16 @@ int main() {
     // do while
     do {
         printf("do while\n");
-    } while (i < 10);
+    } while (inc < 10);
     printf("\n");
 
     // break to break an loop from inside of the action
-    for (i = 0; i < 10; i++) {
-        if (i > 5) {
+    for (inc = 0; inc < 10; inc++) {
+        if (inc > 5) {
             printf("break\n");
             break;
         }
-        printf("%i\n", i);
+        printf("%i\n", inc);
     }
     while (1) {
         printf("break\n");
