@@ -58,13 +58,13 @@ void printlist(node *root) {
 }
 
 void interface(node **root) {
-    printf("\n▎linked list progam"
-           "\n▎actions you can do "
-           "\n▎add an element [a]"
-           "\n▎remove an element [d]"
-           "\n▎print the list [p]"
-           "\n▎QUIT the programc [q]"
-           "\n▎");
+    printf("\nlinked list progam"
+           "\nactions you can do "
+           "\nadd an element [a]"
+           "\nremove an element [d]"
+           "\nprint the list [p]"
+           "\nQUIT the programc [q]"
+           "\n");
     char choice;
     while (1) {
         printf(
@@ -74,8 +74,8 @@ void interface(node **root) {
 
         switch (choice) { // Handle the user's choice
 
-            int value;
         case 'i':
+            int value;
             printf("Enter the number you want to insert : ");
             scanf("%d", &value);
             insertAtBeginnin(root, value);

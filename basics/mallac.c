@@ -10,10 +10,6 @@ int main() {
     printf("%ld\n", size);
     printf("%d , %p\n", *ptr1, ptr1);
 
-    // Free the allocated memory
-    //
-    //
-
     int n, i, *ptr, sum = 0;
 
     printf("Enter number of elements: ");
@@ -28,7 +24,7 @@ int main() {
     }
 
     printf("Enter elements: ");
-    for (i = 0; i < n; ++i) {
+    for (i = 0; i < n; i++) {
         scanf("%d", ptr + i);
         sum += *(ptr + i);
     }
