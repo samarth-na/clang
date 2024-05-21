@@ -74,8 +74,8 @@ void interface(node **root) {
 
         switch (choice) { // Handle the user's choice
 
-        case 'i':
             int value;
+        case 'i':
             printf("Enter the number you want to insert : ");
             scanf("%d", &value);
             insertAtBeginnin(root, value);
