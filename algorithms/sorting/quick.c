@@ -5,6 +5,7 @@ void quicksortMiddle(int arr[], int low, int high) {
     if (low < high) {
         int pivot =
             arr[(low + high) / 2]; // Selecting the middle element as the pivot
+
         int i = low;
         int j = high;
         int temp;
