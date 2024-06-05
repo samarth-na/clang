@@ -5,6 +5,7 @@
 #define HASH_SIZE 100
 
 typedef struct Node {
+
     char key[256];
     int value;
     struct Node *next;
