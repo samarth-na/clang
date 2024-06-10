@@ -35,6 +35,9 @@ int main() {
 
     gotoMeth();
     goto end;
+    if (choose == 1) {
+        goto start;
+    }
 what:
     printf("what\n");
 start:
