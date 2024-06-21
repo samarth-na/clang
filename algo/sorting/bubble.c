@@ -6,6 +6,7 @@
 
 int bubble_sort(int arr[], int length) {
 
+    // 11,2,3,4,5,45,3,56,6,346,7345,5,234,24,53
     int i1, i2, temporary;
     for (i1 = 0; i1 < length - 1; i1++) {
         for (i2 = 0; i2 < length - i1 - 1; i2++) {
