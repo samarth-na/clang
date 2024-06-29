@@ -6,6 +6,9 @@ char ac, bc, cc, dc;
 bool ab, bb, cb, db;
 
 int main() {
-    printf("hello, world\n");
+    ai = 5;
+
+    printf("%d\n", ++ai);
+    printf("%d\n", ai);
     ;
 }
