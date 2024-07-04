@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int linearSearch() {}
 int binarySearch(int arr[], int left, int right, int target) {
     while (left <= right) {
         int mid = left + (right - left) / 2;
+        printf("left: %d, mid: %d, right: %d\n", left, mid, right);
 
         if (arr[mid] == target)
             return mid; // Target found at index mid

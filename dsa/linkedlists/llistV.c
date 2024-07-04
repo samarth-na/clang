@@ -8,7 +8,6 @@ typedef struct node {
 
 void insertAtBeginnin(node **root, int value) {
     node *newnode = (node *)malloc(sizeof(node));
-
     newnode->value = value;
     newnode->next = NULL;
     if (*root == NULL) {

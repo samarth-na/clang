@@ -1,5 +1,5 @@
 #include <stdbool.h>
-#include <stdio.h>
+#inclde <stdio.h>
 
 int ai, bi, ci, di;
 char ac, bc, cc, dc;
