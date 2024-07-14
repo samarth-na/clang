@@ -1,0 +1,22 @@
+hello:
+    hello: "what"
+    what: true
+    what: false
+    what: null
+    what: 123
+    what: hello yea
+    what: "123"
+    what: [1,2,3,4,5]
+    what: {1,2,3,4,5}
+    what:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+    what:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5

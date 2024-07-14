@@ -108,9 +108,8 @@ void handleUserInput(node **root) {
 
     while (1) {
 
-        printf("\n▎Enter your choice (a,m,e-add, d-delete, p-print, q-QUIT "
-               ",c-clear "
-               ") : ");
+        printf("\n▎Enter your choice "
+               "(a,m,e-add, d-delete, p-print, q-QUIT, c-clear) : ");
         scanf(" %c", &choice);
         clearInputBuffer();
 

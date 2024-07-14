@@ -24,7 +24,7 @@ int main() {
     int **dp = &pp;
     printf("%d\n", **dp);
     printf("%d\n", *pp);
-    printf("%d\n", p);
+    printf("%d\n %p\n", p, &p);
 };
 int takepointer(int **a) {
     int *b = *a;

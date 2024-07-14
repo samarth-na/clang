@@ -12,6 +12,8 @@ int main() {
     }
     if (front == -1) {
         printf("something");
+        printf("something else"
+
     } else {
         rear++;
         printf("else something");
