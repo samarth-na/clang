@@ -17,6 +17,7 @@ int reccur(int arr[5]) {
     int current = arr[0];
 
     printx(current);
+
     if (current >= length) {
         return 0;
     }
