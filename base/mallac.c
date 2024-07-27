@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 int main() {
+    qsort(NULL, 0, sizeof(int), NULL);
 
     int *ptr1 = (int *)malloc(sizeof(int));
 
