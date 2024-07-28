@@ -1,50 +1,43 @@
+#include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-// Binary search function
-// Returns the index of the target if found, otherwise returns -1
-int binarySearch(int arr[], int left, int right, int target) {
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
+int sorted_array[] = {2, 3, 4, 10, 40};
 
-        // Check if target is present at mid
-        if (arr[mid] == target)
-            return mid;
-
-        // If target greater, ignore left half
-        if (arr[mid] < target)
-            left = mid + 1;
-
-        // If target is smaller, ignore right half
-        else
-            right = mid - 1;
+int binary_search(int target, int midpoint, int arr[]) {
+    int length = midpoint * 2;
+    if (arr[length] < target) {
+        printf("target element not in list");
+        return EXIT_FAILURE;
     }
 
-    // If we reach here, then the element was not present
-    return -1;
-}
-
-// Function to print an array
-void printArray(int arr[], int size) {
-    for (int i = 0; i < size; i++) {
-        printf("%d ", arr[i]);
+    if (arr[0] > target) {
+        printf("target element not in list");
+        return EXIT_FAILURE;
     }
-    printf("\n");
-}
 
-// Main function to demonstrate binary search
-int main() {
-    int arr[] = {2, 3, 4, 10, 40};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int target = 10;
+    printf("midpoint = %d\n", midpoint);
 
-    printf("Array: ");
-    printArray(arr, n);
+    if (target == arr[midpoint]) {
+        return arr[target];
+    }
+    if (target > arr[midpoint]) {
+        int newmidpoint = (midpoint / 2);
+        return binary_search(target, newmidpoint, arr);
+    }
+    if (target < arr[midpoint]) {
 
-    int result = binarySearch(arr, 0, n - 1, target);
-    if (result == -1)
-        printf("Element %d is not present in array\n", target);
-    else
-        printf("Element %d is present at index %d\n", target, result);
+        int newmidpoint = midpoint + (midpoint / 2);
+        return binary_search(target, newmidpoint, arr);
+    }
 
     return 0;
+}
+int main(int argc, char *argv[]) {
+    printf("hello %d\n", sorted_array[2]);
+
+    int n = sizeof(sorted_array) / sizeof(sorted_array[0]);
+
+    binary_search(2, n / 2, sorted_array);
+    return EXIT_SUCCESS;
 }
