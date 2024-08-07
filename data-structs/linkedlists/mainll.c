@@ -40,15 +40,29 @@ void insertAtEnd(node **root, int value) {
 }
 
 void insertAtPosition(node **root, int value, int position) {
+
     if (position <= 0) {
         insertAtBeginning(root, value);
         return;
     }
-
     node *newNode = createNode(value);
     node *current = *root;
     int currentPosition = 0;
 
+    // to traverse in a linked list you need to find th evalue of next linked
+    // litss adressyou can achive tha tby going over the next filed o your
+    // curent node inlinked lit and change th ecurrent node in the while loop to
+    // that node goingback is also easy that you need and double linked lit and
+    // use th eprevious elements adress t\this all happens through the use of
+    // the pointers poitners are an speical types of varibale that sore the
+    // memory address of another variable this is accomplished by the use of and
+    // & smboll you use the first symtoll swhile declarig od th ecariblae ater
+    // the date type is defined and use the second sybmoll before the name of
+    // carible youre assigning it to like int * chat =  &chasr this is done with
+    // the use off equal operator that is an assinging operator and only of its
+    // kind this is to assing value to an varibale and is one of themost unsed
+    // popersators in programming
+    //
     while (current != NULL && currentPosition < position - 1) {
         current = current->next;
         currentPosition++;

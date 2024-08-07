@@ -7,12 +7,15 @@ typedef struct node {
     struct node *prev; // Added previous pointer
 } node;
 
-node *createNode(int value) {
-    node *newNode = (node *)malloc(sizeof(node));
-    if (newNode == NULL) {
+void checkForNull(node **root) {
+    if (root == NULL) {
         fprintf(stderr, "Memory allocation failed\n");
         exit(1);
     }
+}
+node *createNode(int value) {
+    node *newNode = (node *)malloc(sizeof(node));
+    checkForNull(&newNode);
     newNode->value = value;
     newNode->next = NULL;
     newNode->prev = NULL; // Initialize prev pointer

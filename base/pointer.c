@@ -19,12 +19,8 @@ int main() {
     printf("%p\n", &array[2]);
     printf("%p\n", &array[3]);
 
-    int p = 8;
-    int *pp = &p;
-    int **dp = &pp;
-    printf("%d\n", **dp);
-    printf("%d\n", *pp);
-    printf("%d\n %p\n", p, &p);
+    int balue = 8;
+    int *bointer = &balue;
 };
 int takepointer(int **a) {
     int *b = *a;
