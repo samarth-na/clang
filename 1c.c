@@ -3,6 +3,7 @@
 
 int ai, bi, ci, di;
 char ac, bc, cc, dc;
+
 bool ab, bb, cb, db;
 
 int main() {
