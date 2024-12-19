@@ -1,23 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef struct {
+	int inte;
+	char stre;
+	int *ptr;
+} something;
+
 int main() {
+	int var = 3;
+	something lest;
 
-    typedef struct {
-        int inte;
-        char stre;
-    } something;
+	lest.stre = 'e';
+	lest.inte = var;
 
-    int var = 3;
-    something lest;
+	printf("%c , %d", lest.stre, lest.inte);
+	void *ptr = malloc(sizeof(lest));
+	// void pointers have no limit or size like in int pointer you can only set
+	// value to an int but with void you can set it to anything you want
 
-    lest.stre = 'e';
-    lest.inte = var;
-
-    printf("%c , %d", lest.stre, lest.inte);
-    void *ptr = malloc(sizeof(lest));
-    // void pointers have no limit or size like in int pointer you can only set
-    // value to an int but with void you can set it to anything you want
-
-    printf("%c , %d", ((something *)ptr)->stre, ((something *)ptr)->inte);
+	printf("%c , %d", ((something *)ptr)->stre, ((something *)ptr)->inte);
+	printf("%p", lest.ptr);
 }
