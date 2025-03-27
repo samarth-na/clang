@@ -1,17 +1,21 @@
-#include <algorithm>
-#include <string>
-bool isAnagram(std::string stringA, std::string stringB) {
-	if (stringA.length() != stringB.length()) {
-      return false;
-      }
-	for (int i : stringA) {
-		for (int j : stringB) {
-			if (i == j) {
-                stringB = stringB.replace()
-				break;
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	for (int i = 1; i <= 4; i++) {
+		for (int j = 1; j <= i * 2 - 1; j++) {
+			int k;
+			if (i > j) {
+				std::cout << j;
+			} else if (i == j) {
+				k = j;
+				cout << k;
+			} else {
+				std::cout << k - (j - i);
 			}
 		}
+		std::cout << "\n";
 	}
-	if (stringB.length === 0) return true;
-	return false;
-}
+	return 0;
+};

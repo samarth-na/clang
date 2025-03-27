@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 int main() {
 
     int x = 42;
@@ -44,4 +45,17 @@ void swap(int *n1, int *n2) {
     temp = *n1;
     *n1 = *n2;
     *n2 = temp;
+}
+void constpointer() {
+	int a = 42;
+	int* const ptr = &a;
+
+	const char str[30] = "hello";
+
+	printf("%d\n", *ptr);
+
+	(*ptr)++;
+
+	printf("%d\n", a);
+	printf("%d\n", (*ptr)++);
 }
