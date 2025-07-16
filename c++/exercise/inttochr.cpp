@@ -10,6 +10,7 @@ void IntToChr(int integer) {
 };
 int recurstion(int num) {
 	std::cout << num % 10 << "\n";
+
 	if (num < 10) {
 		return 0;
 	}

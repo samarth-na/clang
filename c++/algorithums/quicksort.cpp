@@ -52,7 +52,7 @@ vector<int> quickSort(vector<int>& arr) {
 //
 
 int main(int argc, char* argv[]) {
-	vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	vector<int> arr = {10, 2, 31, 14, 4, 5, 56, 7, 8, 9, 10};
 	for (int i : arr) {
 		cout << i << " ";
 	}
