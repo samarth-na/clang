@@ -1,38 +1,75 @@
 #include <iostream>
 #include <string>
 
-using std::string, std::endl, std::cin, std::cout;
+using namespace std;
 
-class person {
-  public:
-    int age;
-    string name;
+// Base class (Inheritance)
+class Animal {
+   private:	 // Encapsulation (private data)
+	std::string name;
+	int age;
+
+   protected:  // Encapsulation (protected data, accessible in derived classes)
+	std::string species;
+
+   public:	// Encapsulation (public interface)
+	// Constructor
+	Animal(std::string name, int age, std::string species)
+		: name(name), age(age), species(species) {}
+
+	// Destructor
+	~Animal() { std::cout << name << " is being destroyed." << std::endl; }
+
+	// Method (Abstraction: hiding internal details)
+	void makeSound() { std::cout << "Some generic animal sound!" << std::endl; }
+
+	// Getter (Encapsulation: controlled access)
+	std::string getName() const { return name; }
+
+	// Setter (Encapsulation: controlled modification)
+	void setName(std::string newName) { name = newName; }
+
+	// Virtual function (Polymorphism: allows overriding in derived classes)
+	virtual void displayInfo() const {
+		std::cout << "Name: " << name << ", Age: " << age << ", Species: " << species << std::endl;
+	}
 };
 
-person addnew(string name) {
-    int age;
-    person newPerson;
+// Derived class (Inheritance)
+class Dog : public Animal {
+   private:
+	std::string breed;
 
-    std::cin >> age;
-    {
-        newPerson.name = name;
-        newPerson.age = age;
-    }
+   public:
+	// Constructor (initializes base class and derived class attributes)
+	Dog(std::string name, int age, std::string breed) : Animal(name, age, "Canine"), breed(breed) {}
 
-    return newPerson;
-}
+	// Method overriding (Polymorphism)
+	void makeSound() override { std::cout << "Woof! Woof!" << std::endl; }
 
-person changeAge(person person, int age) {
-    person.age = age;
+	// Method overriding (Polymorphism)
+	void displayInfo() const override {
+		Animal::displayInfo();	// Call base class method
+		std::cout << "Breed: " << breed << std::endl;
+	}
+};
 
-    return person;
-}
 int main() {
+	// Create an object (Encapsulation)
+	Dog myDog("Buddy", 3, "Golden Retriever");
 
-    person dane;
-    addnew("namami");
+	// Call methods (Abstraction)
+	myDog.makeSound();	// Output: Woof! Woof!
+	myDog.displayInfo();
+	/*
+	Output:
+	Name: Buddy, Age: 3, Species: Canine
+	Breed: Golden Retriever
+	*/
 
-    dane.age = 19;
-    cout << "enter name" << endl;
-    cin >> dane.name;
+	// Polymorphism: Base class pointer to derived class object
+	Animal* animalPtr = &myDog;
+	animalPtr->makeSound();	 // Output: Woof! Woof! (if makeSound is virtual)
+
+	return 0;
 }

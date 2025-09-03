@@ -20,8 +20,8 @@ using namespace std;
 
 typedef struct node {
 	int data;
-	struct node *prev;
-	struct node *next;
+	node *prev;
+	node *next;
 } node;
 
 class LinkedList {
